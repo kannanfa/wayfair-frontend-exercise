@@ -1,0 +1,15 @@
+.sidebar > ul.sidenav-collapse {
+    padding: 0px;
+}
+.sidenav-collapse {
+    list-style: none;
+}
+.sidenav-link {
+  color: #616161;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}

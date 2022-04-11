@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "App.css";
+import "style";
+import "bootstrap/dist/js/bootstrap.js";
+import { ErrorBoundary } from "common/components";
+import { Provider } from "react-redux";
+import { Storage } from "store/index";
+import {App} from "modules/index"
+import AppRoutes from "modules/routes";
+import { BrowserRouter  } from "react-router-dom";
 
-function App() {
+function bootstrap() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://www.wayfair.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Wayfair
-        </a>
-      </header>
+    <div className="container-fluid">
+      <Provider store={Storage}>
+        <ErrorBoundary>
+        <BrowserRouter>
+            <App> 
+              <AppRoutes></AppRoutes>
+            </App>
+          </BrowserRouter>
+        </ErrorBoundary>
+      </Provider>
     </div>
   );
 }
 
-export default App;
+export default bootstrap;

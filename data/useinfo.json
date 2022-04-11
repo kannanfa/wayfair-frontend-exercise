@@ -1,0 +1,58 @@
+{
+    "name": "Safavieh",
+    "role":"Manager",
+    "dropdownMenu": [
+        {
+            "type": "link",
+            "title": "Account Settings",
+            "url": null,
+            "id": "account-setting",
+            "icon": "account",
+            "hasAlert": false
+        },
+        {
+            "type": "link",
+            "title": "User Management",
+            "url": null,
+            "id": "user-management",
+            "icon": "user",
+            "hasAlert": false
+        },
+        {
+            "type": "link",
+            "title": "My Team",
+            "url": null,
+            "id": "MyTeam",
+            "icon": "Team",
+            "hasAlert": false
+        },
+        {
+            "type": "option",
+            "url": null,
+            "id": "Language",
+            "icon": "",
+            "hasAlert": false,
+            "values": [
+                {
+                    "id": "German",
+                    "value": "German",
+                    "isDefault": "true",
+                    "isSelected": "false"
+                },
+                {
+                    "id": "English(UK)",
+                    "value": "English(UK)",
+                    "isDefault": "true",
+                    "isSelected": "true"
+                }
+            ]
+        },
+        {
+            "title": "Logout",
+            "url": null,
+            "id": "Language",
+            "icon": "",
+            "hasAlert": false
+        }
+    ]
+}
