@@ -22,7 +22,8 @@ const SideNavBarContainer = () =>{
 
 
    return <div className={sideBarClass} >
-            {!isLoading && <SideNavbar data={data} isLoading={isLoading}></SideNavbar>}
+            {!isLoading && error && <div className="alert alert-warning" role="alert"> {error?.message}! Unable to load Navigation bar</div>}
+            {!isLoading && !error && <SideNavbar data={data} isLoading={isLoading}></SideNavbar>}
     </div>
 }
 

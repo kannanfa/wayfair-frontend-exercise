@@ -13,7 +13,7 @@ export function App(state=Map(), action){
                         .setIn([action.loginId, 'userinfo', "data"], fromJS(action.response));
         case GET_USER_INFO_FAIURE:
             return state.setIn([action.loginId, 'userinfo', "isLoading"], false)
-                        .setIn([action.loginId, 'userinfo', "error"],fromJS(action.data));
+                        .setIn([action.loginId, 'userinfo', "error"],fromJS(action.error));
         case GET_NAVIGATION_INFO_REQUEST:
             return state.setIn([action.loginId, 'menu'], Map({
                 "isLoading":true
@@ -23,7 +23,7 @@ export function App(state=Map(), action){
                         .setIn([action.loginId, 'menu', "data"], fromJS(action.response));
         case GET_NAVIGATION_INFO_FAIURE:
             return state.setIn([action.loginId, 'menu', "isLoading"], false)
-                        .setIn([action.loginId, 'menu', "error"],fromJS(action.data));
+                        .setIn([action.loginId, 'menu', "error"],fromJS(action.error));
         default:
             return state;
     }

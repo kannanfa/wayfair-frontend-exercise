@@ -15,14 +15,16 @@ const NavBarContainer = () =>{
 
     const userInfo = useContext(UserContext);
     const value = useSelector(state => state.getIn(['App', userInfo.loginId,'userinfo'], List()));
-    const { data =[], isLoading = false, error = null } = value.toJS()
+    const { data =null, isLoading = false, error = null } = value.toJS()
     const navBarClass = isLoading ? "col-12 p-0 navBarlayout loading" : "col-12 p-0"
 
     return <div className={navBarClass}>
+                
                 {!isLoading && <Navbar data={data} >
-                          <Dropdown  {...data}></Dropdown>
+                          {data && <Dropdown  {...data}></Dropdown>}
 
                 </Navbar> }
+                {!isLoading && error && <div className="alert alert-warning" role="alert"> {error?.message}! Unable to load user info.</div>}
             </div>
 }
 
