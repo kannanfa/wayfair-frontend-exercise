@@ -74,103 +74,102 @@ We have included an example navigation data JSON response in the data directory 
 ---
 
 ### Folder Structure
-
-├─ src
-│ ├─ assets                                   # Assets folder used manage static file like Images & Plugins 
-│ │ └─ images                              
-│ │   ├─ logo.svg
-│ │   └─ wayfair.svg
-│ ├─ common                              # Common and reusable elements
-│ │ ├─ components                     # Common Components like Dropdown,Navbar,Side Navbar, etc..
-│ │ │ ├─ Dropdown                                 
-│ │ │ │ ├─ Dropdown.js
-│ │ │ │ ├─ DropdownButton.js
-│ │ │ │ └─ DropdownList.js
-│ │ │ ├─ ErrorBoundary
-│ │ │ │ └─ ErrorBoundary.js
-│ │ │ ├─ Icon
-│ │ │ │ ├─ Icon.js
-│ │ │ │ └─ ToggleIcon.js
-│ │ │ ├─ Navbar
-│ │ │ │ ├─ Navbar.js
-│ │ │ │ └─ NavbarBrand.js
-│ │ │ ├─ SideNavbar
-│ │ │ │ ├─ **tests**
-│ │ │ │ │ ├─ mock.json
-│ │ │ │ │ └─ SideNavbar.test.js
-│ │ │ │ ├─ List.js
-│ │ │ │ ├─ MenuLink.js
-│ │ │ │ ├─ SideNavbar.css
-│ │ │ │ ├─ SideNavbar.js
-│ │ │ │ └─ utils.js
-│ │ │ └─ index.js
-│ │ ├─ context                             # Common Context like User Context, Theme Context, etc.
-│ │ │ ├─ index.js
-│ │ │ └─ UserContext.js
-│ │ ├─ hooks                               # Common hooks used in our application
-│ │ │ ├─ index.js
-│ │ │ ├─ useDidMountEffects.js
-│ │ │ └─ useOnClickOutSide.js
-│ │ ├─ layouts                              # Common styled component, Layouts
-│ │ │ ├─ loader
-│ │ │ │ ├─ layout.js
-│ │ │ │ └─ style.css
-│ │ │ ├─ shape
-│ │ │ │ ├─ Circle.js
-│ │ │ │ └─ Rectangle.js
-│ │ │ └─ index.js
-│ │ ├─ translations/                     #Files used for application translation
-│ │ └─ utils                                  # Common util function like date utils, currency utils, etc. 
-│ │   ├─ Error
-│ │   │ └─ Error.js
-│ │   ├─ http
-│ │   │ └─ http.js
-│ │   ├─ icons
-│ │   │ └─ iconlist.js
-│ │   ├─ logger
-│ │   │ └─ logger.js
-│ │   └─ index.js
-│ ├─ modules                             # Module folder contains all the modules like User, Dashboard, etc.
-│ │ ├─ App                                 # App Module Files 
-│ │ │ ├─ Component                 # App module all the components
-│ │ │ │ ├─ index.js    
-│ │ │ │ └─ Landing.js
-│ │ │ ├─ Containers                   # App module all the containers
-│ │ │ │ ├─ index.js
-│ │ │ │ ├─ MainContainer.js
-│ │ │ │ ├─ NavBarContainer.js
-│ │ │ │ └─ SideNavContainer.js
-│ │ │ ├─ action.js                        #App Module redux action file
-│ │ │ ├─ index.js                         #App Module main file
-│ │ │ ├─ reducer.js                     # App Module redux reducer file 
-│ │ │ └─ style.css                        # App Module common CSS file
-│ │ ├─ Reporting                         # Reporting Module files
-│ │ │ ├─ Component                  # Reporting Module Component files
-│ │ │ │ └─ index.js
-│ │ │ ├─ Containers                     # Reporting Module Container Files
-│ │ │ │ └─ index.js
-│ │ │ ├─ action.js                         #Reporting Module  action File
-│ │ │ ├─ index.js                          # Reporting Module  main file
-│ │ │ └─ reducer.js                       #Reporting Module reducer file
-│ │ ├─ index.js                                    
-│ │ └─ routes.js                            #Common Router file for all the modules 
-│ ├─ services/                               # Please add all the service in the service factory 
-│ ├─ store                                     #Redux Store related files
-│ │ ├─ helper.js                             #Redux helper files
-│ │ ├─ index.js
-│ │ ├─ reducerManager.js             #Redux dynamic reducer injection file
-│ │ └─ store.js                                #Config store file
-│ ├─ App.css                                  # CSS file for all the application 
-│ ├─ App.js                                    # App bootstrap file for this application
-│ ├─ index.css                                # Global CSS
-│ ├─ index.js                                   #React Entry file
-│ ├─ reportWebVitals.js                 
-│ ├─ setupTests.js    
-│ └─ style.js                                     #Common file to import all third party CSS
-├─ jsconfig.json                               #File to support absolute import path
-├─ package.json                              #dependencies & configuration
-├─ [README.md](http://readme.md/) 
-└─ server.js                                      #simple Node.js static file server to serve data
+├─ src\
+│ ├─ assets                                   <b>Assets folder used manage static file like Images & Plugins </b>\
+│ │ └─ images                              \
+│ │   ├─ logo.svg\
+│ │   └─ wayfair.svg\
+│ ├─ common                              <b>Common and reusable elements</b>\
+│ │ ├─ components                     <b>Common Components like Dropdown,Navbar,Side Navbar, etc..</b>\
+│ │ │ ├─ Dropdown                                 \
+│ │ │ │ ├─ Dropdown.js\
+│ │ │ │ ├─ DropdownButton.js\
+│ │ │ │ └─ DropdownList.js\
+│ │ │ ├─ ErrorBoundary\
+│ │ │ │ └─ ErrorBoundary.js\
+│ │ │ ├─ Icon\
+│ │ │ │ ├─ Icon.js\
+│ │ │ │ └─ ToggleIcon.js\
+│ │ │ ├─ Navbar\
+│ │ │ │ ├─ Navbar.js\
+│ │ │ │ └─ NavbarBrand.js\
+│ │ │ ├─ SideNavbar\
+│ │ │ │ ├─ **tests**\
+│ │ │ │ │ ├─ mock.json\
+│ │ │ │ │ └─ SideNavbar.test.js\
+│ │ │ │ ├─ List.js\
+│ │ │ │ ├─ MenuLink.js\
+│ │ │ │ ├─ SideNavbar.css\
+│ │ │ │ ├─ SideNavbar.js\
+│ │ │ │ └─ utils.js\
+│ │ │ └─ index.js\
+│ │ ├─ context                             <b>Common Context like User Context, Theme Context, etc.</b>\
+│ │ │ ├─ index.js\
+│ │ │ └─ UserContext.js\
+│ │ ├─ hooks                               <b>Common hooks used in our application</b>\
+│ │ │ ├─ index.js\
+│ │ │ ├─ useDidMountEffects.js\
+│ │ │ └─ useOnClickOutSide.js\
+│ │ ├─ layouts                              <b>Common styled component, Layouts</b>\
+│ │ │ ├─ loader\
+│ │ │ │ ├─ layout.js\
+│ │ │ │ └─ style.css\
+│ │ │ ├─ shape\
+│ │ │ │ ├─ Circle.js\
+│ │ │ │ └─ Rectangle.js\
+│ │ │ └─ index.js\
+│ │ ├─ translations/                     <b>Files used for application translation</b>\
+│ │ └─ utils                                  <b>Common util function like date utils, currency utils, etc. </b>\
+│ │   ├─ Error\
+│ │   │ └─ Error.js\
+│ │   ├─ http\
+│ │   │ └─ http.js\
+│ │   ├─ icons\
+│ │   │ └─ iconlist.js\
+│ │   ├─ logger\
+│ │   │ └─ logger.js\
+│ │   └─ index.js\
+│ ├─ modules                             <b>Module folder contains all the modules like User, Dashboard, etc.</b>\
+│ │ ├─ App                                 <b>App Module Files </b>\
+│ │ │ ├─ Component                 <b>App module all the components</b>\
+│ │ │ │ ├─ index.js    \
+│ │ │ │ └─ Landing.js\
+│ │ │ ├─ Containers                   <b>App module all the containers</b>\
+│ │ │ │ ├─ index.js\
+│ │ │ │ ├─ MainContainer.js\
+│ │ │ │ ├─ NavBarContainer.js\
+│ │ │ │ └─ SideNavContainer.js\
+│ │ │ ├─ action.js                        <b>App Module redux action file</b>\
+│ │ │ ├─ index.js                         <b>App Module main file</b>\
+│ │ │ ├─ reducer.js                     <b>App Module redux reducer file </b>\
+│ │ │ └─ style.css                        <b>App Module common CSS file</b>\
+│ │ ├─ Reporting                         <b>Reporting Module files</b>\
+│ │ │ ├─ Component                  <b>Reporting Module Component files</b>\
+│ │ │ │ └─ index.js\
+│ │ │ ├─ Containers                     <b>Reporting Module Container Files</b>\
+│ │ │ │ └─ index.js\
+│ │ │ ├─ action.js                         <b>Reporting Module  action File</b>\
+│ │ │ ├─ index.js                          <b>Reporting Module  main file</b>\
+│ │ │ └─ reducer.js                       <b>Reporting Module reducer file</b>\
+│ │ ├─ index.js                                    \
+│ │ └─ routes.js                            <b>Common Router file for all the modules </b>\
+│ ├─ services/                               <b>Please add all the service in the service factory </b>\
+│ ├─ store                                     <b>Redux Store related files</b>\
+│ │ ├─ helper.js                             <b>Redux helper files</b>\
+│ │ ├─ index.js\
+│ │ ├─ reducerManager.js             <b>Redux dynamic reducer injection file</b>\
+│ │ └─ store.js                                <b>Config store file</b>\
+│ ├─ App.css                                  <b>CSS file for all the application </b>\
+│ ├─ App.js                                    <b>App bootstrap file for this application</b>\
+│ ├─ index.css                                <b>Global CSS</b>\
+│ ├─ index.js                                   <b>React Entry file</b>\
+│ ├─ reportWebVitals.js                 \
+│ ├─ setupTests.js    \
+│ └─ style.js                                     <b>Common file to import all third party CSS</b>\
+├─ jsconfig.json                               <b>File to support absolute import path</b>\
+├─ package.json                              <b>dependencies & configuration</b>\
+├─ [README.md](http://readme.md/) \
+└─ server.js                                      <b>simple Node.js static file server to serve data</b>\
 
 ---
 
