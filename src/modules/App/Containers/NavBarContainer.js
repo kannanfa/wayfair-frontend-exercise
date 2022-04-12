@@ -5,6 +5,12 @@ import { List } from "immutable";
 import { useContext } from "react";
 import { useSelector } from "react-redux";
 
+
+/**
+ * NavBarContainer - It a layout component used to create base layout for navbar  with dropdown
+ * @param {Array.<Component>} {children} - List of child component
+ * @returns {Component}
+ */
 const NavBarContainer = () =>{
 
     const userInfo = useContext(UserContext);

@@ -1,5 +1,5 @@
 import React from "react";
-import {Dropdown, NavbarBrand} from "common/components";
+import {NavbarBrand} from "common/components";
 
 
 const index = ({children}) => {

@@ -1,10 +1,25 @@
 import react, { useState } from "react";
-import  {useDidMountEffect, useOnClickOutside} from "common/hooks"
+import  {useDidMountEffect} from "common/hooks"
 
+
+
+/**
+ * isChildAvaliable - Util function help us to check where the main menu has sub menu or not
+ * @param {Array.<MenuItem>} children
+ * @returns {Boolean} - True - If children avaliable  False - If there is no children
+ */
 const isChildAvaliable = (children) => {
   const isChildrenAvaliable = children && children.length > 0 ? true : false;
   return isChildrenAvaliable;
 };
+
+/**
+ * isMenuOpen - Util help us to determain, wether the given menu is opened or not
+ * @param {Array.<number>} selectedMenu - list of select menu index every level 
+ * @param {number} position - Menu sub Level postion like Main menu value - 0, Submenu value - 1,  menu inside submenu value would be - 2
+ * @param {any} index - Gives the current position of the menu
+ * @returns {Boolean} - True - If menu open  False - If menu is closed
+ */
 
 const isMenuOpen = (selectedMenu, position, index) => {
   const canOpen =
@@ -14,6 +29,14 @@ const isMenuOpen = (selectedMenu, position, index) => {
   return canOpen;
 };
 
+/**
+ * isFinalChiled - validate is this is the final child.
+ * @param {boolean} isOpen  - boolean represent wheathe the current itemis open state or not 
+ * @param {number} position - Menu sub Level postion like Main menu value - 0, Submenu value - 1,  menu inside submenu value would be - 2
+ * @param {Array.<number>} selectedMenu - list of select menu index every level
+ * @param {boolean} isChildrenAvaliable - Do this menu item has sub menu or not 
+ * @returns {boolean} True - If it is final child / False - if it is not a final child
+ */
 const isFinalChiled = (
   isOpen,
   position,
@@ -29,13 +52,27 @@ const isFinalChiled = (
   return isFinalChild;
 };
 
+/**
+ * canShowBorder - Util function help us to control the border shown in the sidebar navigation menu during the menu is in icon state
+ * @param {boolean} isOpen - Is menu is selected menu
+ * @param {number} position - Menu sub Level postion like Main menu value - 0, Submenu value - 1,  menu inside submenu value would be - 2
+ * @param {boolean} isIconOnlyMenu - Is side navbar only showing icon 
+ * @returns {boolean}
+ */
 const canShowBorder = (isOpen, position, isIconOnlyMenu) => {
   const canShowIconBorder =
     isOpen && position === 0 && isIconOnlyMenu ? true : false;
   return canShowIconBorder;
 };
 
-const useSideBar = (ref) => {
+
+
+
+/**
+ * useSideBar - helper function to seperate the business logic from the view component 
+ * @returns {Component}
+ */
+const useSideBar = () => {
  
   const [isIconOnlyMenu, setIconOnly] = useState(true);
   const [selectedMenu, setSelectedMenu] = useState([]);

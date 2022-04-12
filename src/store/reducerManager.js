@@ -2,6 +2,14 @@ import {
   combineReducers
 } from 'redux-immutable';
 
+
+
+/**
+ * createReducerManager - This function help our code to support CODE SPLITTING and inject reducer Dynamically 
+ * @param {Object} initialReducers - It contains list of default reducers we configured in our application 
+ * @returns {Object} 
+ */
+
 export function createReducerManager(initialReducers) {
     // Create an object which maps keys to reducers
     const reducers = { ...initialReducers }

@@ -1,3 +1,5 @@
+
+/* Root configuration to maintain app theam */
 :root {
   --blue: #1e90ff;
   --white: #ffffff;
@@ -6,9 +8,12 @@
   --primary-yellow:#ffc107;
 }
 
+/* Font to apply all over the applicaion */
 body{
     font-family:  'Open Sans';
 }
+
+
 a:hover {
   color: var(--primary) !important;
 }
@@ -53,19 +58,10 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
 /* -------------------------------------------------------- */
 
 
-/* The loading Class */
+/* The loading animation for cards */
 .loading {
   position: relative;
   background-color: #e2e2e2;
@@ -98,6 +94,6 @@ a:hover {
   }
 }
 
-
+/* -------------------------------------------------------- */
 
 

@@ -1,5 +1,12 @@
 import { useEffect } from "react";
 
+
+/**
+ * useOnClickOutside - will help us to identify click outside of reference 
+ * @param {React.ref} ref - Reference of the component to cross check
+ * @param {handler} handler - Function which need to fire after the user click outside
+ * @returns {Hook}
+ */
 const useOnClickOutside = (ref, handler) => {
     useEffect(
       () => {

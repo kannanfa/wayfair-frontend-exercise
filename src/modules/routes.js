@@ -1,5 +1,10 @@
-import { Routes , Route, BrowserRouter  } from "react-router-dom";
+import { Routes , Route, } from "react-router-dom";
 
+
+/**
+ * Common Router file for whole application
+ * @returns {Object} - Routing list component
+ */
 const AppRoutes = () => {
   return (
     

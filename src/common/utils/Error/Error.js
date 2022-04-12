@@ -1,3 +1,6 @@
+/** 
+ * This class give the basic interface for all error object 
+ * */
 class UiError extends Error{
     appVersion = null;
     path=null;

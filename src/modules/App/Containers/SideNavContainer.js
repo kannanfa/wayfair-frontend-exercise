@@ -6,6 +6,13 @@ import { useContext } from "react";
 import { useSelector } from "react-redux";
 
 
+/**
+ * SideNavBarContainer - It a layout component used to create base layout for side navbar
+ * @param {Array.<Component>} {children} - List of child component
+ * @param {Function} useContext - Used to access the user info from user context
+ * @returns {Component}
+ */
+
 const SideNavBarContainer = () =>{
 
     const userInfo = useContext(UserContext);

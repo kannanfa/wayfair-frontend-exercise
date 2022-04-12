@@ -1,4 +1,8 @@
-import { Outlet } from "react-router-dom"
+/**
+ * MainContainer - It a layout component used to create base layout for this application 
+ * @param {Array.<Component>} {children} - List of child component
+ * @returns {Component}
+ */
 const MainContainer = ({ children }) => {
   return (
     <div className="col p-0">

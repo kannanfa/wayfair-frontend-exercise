@@ -1,6 +1,12 @@
 import UiError from 'common/utils/Error/Error'
 
 
+
+
+/** 
+ * Logger - This class help us to collect all the error happening in our application and send data feed to our backend service 
+ * 
+ */
 class Logger{
     appVersion;
     static Logs = []

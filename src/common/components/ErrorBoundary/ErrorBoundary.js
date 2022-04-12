@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Logger from "common/utils/logger/logger";
 
+/** 
+ * ErrorBoundary - class use to cache the unhandled error occures on the child component
+ * @param {boolean} hasError - Boolean value used to show/hide  the erro message component
+ */
 class ErrorBoundary extends Component {
     constructor(props) {
       super(props);

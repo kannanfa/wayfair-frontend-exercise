@@ -1,5 +1,11 @@
 import react from "react";
  
+/**
+ * Dropdown button 
+ * @param {Object} props 
+ * @param {string} Props.ButtonText - Button name/lable you wan to display
+ * @returns {Component}
+ */
 const index = ({ButtonText}) =>{
     return (
       <a

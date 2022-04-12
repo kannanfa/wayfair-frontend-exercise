@@ -1,5 +1,9 @@
-import axios from 'axios';
 
+/** 
+ * This Object will give as axios instanse with basic URI information configuration needed all ove the application
+ * */
+
+import axios from 'axios';
 
 const instance = axios.create({
     baseURL: "http://localhost:9000",
